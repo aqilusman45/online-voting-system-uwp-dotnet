@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="SMIU_VOTING_SYSTEM.AccountSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SMIU_VOTING_SYSTEM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid Background="#cccedb">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid  Grid.RowSpan="3" Grid.Column="0" MaxHeight="650">
+                <RelativePanel>
+                    <StackPanel Margin="20">
+                        <TextBox Width="300" PlaceholderText="Email" Header= "Email" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <TextBox Width="300" PlaceholderText="Address" Header= "Address" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <TextBox Width="300" PlaceholderText="Student ID" Header= "Student ID" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <ComboBox Width="300" HorizontalAlignment="Center" Margin="0,24,0,0"  Header= "Society"  PlaceholderText="Select Society" SelectionChanged="ComboBox_SelectionChanged" >
+                            <x:String>Arts</x:String>
+                            <x:String>Community</x:String>
+                            <x:String>Science</x:String>
+                            <x:String>Litrary</x:String>
+                        </ComboBox>
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <Button Content="Update" Margin="24" Click="Button_ClickAccountSettingsUpdate"/>
+                        </StackPanel>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid Grid.RowSpan="3" Grid.Column="1" MaxHeight="530" >
+                <RelativePanel>
+                    <StackPanel>
+                        <TextBlock Text="Update Password" FontSize="25" />
+                        <TextBox Width="300" PlaceholderText="Email" Header= "Email" x:Name="Reset_Password" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <Button HorizontalAlignment="Center" Margin="24"  Content="Change Passowrd" Click="Button_ClickPasswordUpdateAsync"/>
+                        <TextBlock  x:Name="catchHandle"/>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

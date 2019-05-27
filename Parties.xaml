@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="SMIU_VOTING_SYSTEM.Parties"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SMIU_VOTING_SYSTEM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <Grid Background="#cccedb">
+                <Grid.Resources>
+                    <x:Double x:Key="TileHeight">150</x:Double>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1*" />
+
+                </Grid.RowDefinitions>
+
+               
+                
+          
+                
+                <!--<Grid Grid.Row="1" Grid.Column="2" MinHeight="{StaticResource TileHeight}" Background="LightGray" Margin="6" >
+                    <Image Source="/Assets/community.png" Margin="-9,-25,9,25"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" MinHeight="{StaticResource TileHeight}" Background="LightGray" Margin="6" >
+                    <Image Source="/Assets/literary.jpg" Margin="3,-167,-3,167"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2" MinHeight="{StaticResource TileHeight}" Background="DarkGray" Margin="6" >
+                    <Image Source="/Assets/science.png" Margin="-6,-149,6,149"/>
+
+                </Grid>-->
+                
+                
+                
+                <Grid Grid.Row="1"  Grid.Column="3"  Background="{ThemeResource SystemAccentColor}" >
+                    <Image  Source="/Assets/debating1.png" />
+                </Grid>
+
+                <Grid Grid.Row="1"  Grid.Column="0"   Margin="6"  >
+                    <Image  Source="/Assets/sports1.png" />
+                </Grid>
+
+                <Grid Grid.Row="1"    Grid.ColumnSpan="2" Grid.Column="1"  Background="DarkGray" Margin="6" >
+                    <Image Source="/Assets/arts.jpg"/>
+                </Grid>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

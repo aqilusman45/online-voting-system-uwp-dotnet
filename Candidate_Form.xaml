@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="SMIU_VOTING_SYSTEM.Candidate_Form"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SMIU_VOTING_SYSTEM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#cccedb">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" MaxHeight="650">
+            <RelativePanel>
+                <StackPanel Height="682" Width="429">
+                    <TextBox x:Name="name" Width="300" PlaceholderText="Name" Header= "Candidate Name" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+
+                    <ComboBox x:Name="Designation" Width="300" HorizontalAlignment="Center" Margin="0,24,0,0"  Header= "Designation"  PlaceholderText="Select Designation" SelectionChanged="ComboBox_SelectionChanged" >
+                        <x:String>President</x:String>
+                        <x:String>Vice_President</x:String>
+                        <x:String>Treasurer</x:String>
+                        <x:String>Male_Secretary</x:String>
+                        <x:String>Female_Secretary</x:String>
+                    </ComboBox>
+
+                    <ComboBox x:Name="society" Width="300" HorizontalAlignment="Center" Margin="0,24,0,0"  Header= "Society Name"  PlaceholderText="Society Name" SelectionChanged="ComboBox_SelectionChanged" >
+                        <x:String>arts</x:String>
+                        <x:String>community</x:String>
+                        <x:String>science</x:String>
+                        <x:String>literary</x:String>
+                        <x:String>sports</x:String>
+                    </ComboBox>
+
+                   
+
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" >
+
+                        <TextBlock  x:Name="catchHandle"/>
+                        <Button Content="Register Candidate" Margin="24" Click="Button_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </RelativePanel>
+        </Grid>
+
+
+
+    </Grid>
+</Page>

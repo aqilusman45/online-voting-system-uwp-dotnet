@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="SMIU_VOTING_SYSTEM.Election_Controls"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SMIU_VOTING_SYSTEM"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+
+        <Grid Background="#cccedb">
+            <Grid.Resources>
+                <x:Double x:Key="TileHeight">150</x:Double>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="Auto" />
+
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4">
+
+                <StackPanel Orientation="Horizontal"   >
+                    <TextBlock Margin="30" Text="Voting Status" FontSize="24" />
+                    <Button HorizontalAlignment="Center"  Margin="20" Click="Button_Click_1">Start Voting</Button>
+                    
+                    <Button HorizontalAlignment="Center" Margin="20" Click="Button_Click_2">End Voting</Button>
+                    <Button HorizontalAlignment="Center"  Margin="40" Click="Button_Clickshow">Show Result</Button>
+                    <Button HorizontalAlignment="Center"  Margin="20" Click="Button_Clickhide"> Hide Results </Button>
+                    <TextBlock x:Name="catchHandle"/>
+                </StackPanel>
+               
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="3" >
+                <StackPanel>
+                    <TextBlock Margin="30" Text="Users Access Controls" FontSize="24" />
+                    <!--<ListView  SelectionChanged="ListView_SelectionChanged"  ItemsSource="{x:Bind usersList}">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <ItemsStackPanel AreStickyGroupHeadersEnabled="True"/>
+                            </ItemsPanelTemplate >
+                        </ListView.ItemsPanel>
+                    </ListView >-->
+                    <StackPanel x:Name="userList" >
+                        
+                    </StackPanel>
+                    <Button Click="Button_Click">Allow</Button>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Page>

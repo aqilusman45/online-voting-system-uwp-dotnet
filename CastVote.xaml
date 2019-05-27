@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="SMIU_VOTING_SYSTEM.CastVote"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SMIU_VOTING_SYSTEM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid Name="castVoteGrid" >
+        <ScrollViewer>
+            <Grid Background="#cccedb" >
+                <Grid.Resources>
+                    <x:Double x:Key="TileHeight">150</x:Double>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <StackPanel  >
+                        <ComboBox x:Name="presidentbox" Header="President" Margin="30" FontSize="16" Height="60" Width="296" 
+          ItemsSource="{x:Bind president1}" DisplayMemberPath="Source"/>
+                        <ComboBox x:Name="tres" Header="Treasurar"  FontSize="16"  Margin="30" Height="60" Width="296" 
+          ItemsSource="{x:Bind treasure}" DisplayMemberPath="Source"/>
+                        <ComboBox x:Name="vpresidentboc" Header="Vice President"  Margin="30" FontSize="16" Height="60" Width="296" 
+          ItemsSource="{x:Bind vpresident}" DisplayMemberPath="Source"/>
+                        <ComboBox x:Name="msec" Header="Male Secretary"  Margin="30" FontSize="16" Height="60" Width="296" 
+          ItemsSource="{x:Bind msecretary}" DisplayMemberPath="Source"/>
+                        <ComboBox x:Name="fsec" Header="Female Secretary"  Margin="30" FontSize="16" Height="60" Width="296" 
+          ItemsSource="{x:Bind fsecretary}" DisplayMemberPath="Source"/>
+                        <Button x:Name="casteVoteButton" Content="Add vote" Margin="20" HorizontalAlignment="Center" Click="Button_ClickAsync"/>
+                        <TextBlock  x:Name="catchHandle"/>
+
+                    </StackPanel>
+                    </Grid>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

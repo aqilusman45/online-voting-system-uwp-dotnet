@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="SMIU_VOTING_SYSTEM.SignUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SMIU_VOTING_SYSTEM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid Background="#6abf4e">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid  Grid.RowSpan="3" Grid.Column="1" MaxHeight="650" BorderBrush="#D3D3D3" BorderThickness="2" Background="White" Height="Auto" CornerRadius="20">
+                <RelativePanel>
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Sign Up" FontSize="30" SelectionChanged="TextBlock_SelectionChanged" />
+                        <TextBox x:Name="email" Width="300" PlaceholderText="Email" Header= "Email" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <TextBox x:Name="address" Width="300" PlaceholderText="Address" Header= "Address" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <TextBox x:Name="studentid" Width="300" PlaceholderText="Student ID" Header= "Student ID" Margin="0,24,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                        <ComboBox x:Name="society" Width="300" HorizontalAlignment="Center" Margin="0,24,0,0"  Header= "Society"  PlaceholderText="Select Society" SelectionChanged="ComboBox_SelectionChanged" >
+                            <x:String>arts</x:String>
+                            <x:String>community</x:String>
+                            <x:String>science</x:String>
+                            <x:String>litrary</x:String>
+                            <x:String>sports</x:String>
+                        </ComboBox>
+
+
+                        <PasswordBox x:Name="password" Width="300" PlaceholderText="Password" Header= "Password" Margin="0,24,0,0" HorizontalAlignment="Center" PasswordChanged="PasswordBox_PasswordChanged"/>
+                        <PasswordBox x:Name="confirm" Width="300" PlaceholderText="Confirm Password" Header= "Confirm Password" Margin="0,24,0,0" HorizontalAlignment="Center" PasswordChanged="PasswordBox_PasswordChanged_1"/>
+                        <TextBlock  x:Name="catchHandle"/>
+
+                       <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <Button Content="Sign Up" Margin="24" Click="Button_ClickAsync"/>
+                            <Button Content="Cancel" Margin="24" Click="Button_Click_1"/>
+                        </StackPanel>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Page>
